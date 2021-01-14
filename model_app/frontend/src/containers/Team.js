@@ -67,7 +67,7 @@ function Team(props){
 
       <div className = 'CardGreenBackground1'>
         <h3 align="left">Research Supervisor</h3>
-        <SupGridList >
+        <SupGridList>
         </SupGridList>
       </div>
 

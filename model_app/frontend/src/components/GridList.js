@@ -4,6 +4,8 @@ import GridListTile from '@material-ui/core/GridListTile';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
+import SupGridList from '../components/SupGridList.js'
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -103,6 +105,8 @@ export default function TitlebarGridList(tileData) {
 
   return (
     <Container className={classes.root} maxWidth="md">
+      <SupGridList >
+        </SupGridList>
       <Grid container spacing={4}>
         {tileData.map((tile) => (
           
