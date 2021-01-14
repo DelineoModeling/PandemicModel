@@ -3,6 +3,7 @@ import mathias_headshot from '../images/mathias_insley.png'
 import simone_headshot from '../images/simone_bliss.png'
 import stephen_headshot from '../images/stephen_li.png'
 import image_simone from '../images/image.png'
+import image_zoe from '../images/zoe_kim.png'
 
 const tileData = [
   {
@@ -28,7 +29,7 @@ const tileData = [
   },
 
   {
-    img: image,
+    img: image_zoe,
     name: 'Zoe Kim',
     role: 'Information Support Lead',
     description: 'Major',
