@@ -14,6 +14,9 @@ import { spacing } from "@material-ui/system";
 import MuiButton from "@material-ui/core/Button";
 import Typography from '@material-ui/core/Typography';
 
+import { withStyles } from '@material-ui/core';
+
+
 
 
 import './Team.css';
@@ -39,33 +42,91 @@ function Team(props){
     }
   });
 
-  const useStyles = makeStyles((theme) => ({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-      },
+
+  const styles = {
+    button: {
+        borderColor: '#66FCF1',
+        backgroundColor: '#66FCF1',
+        border: '1px solid',
+        "&:hover": {
+            backgroundColor: '#222629',
+            color: '#66FCF1',
+            borderColor: '#66FCF1',
+        },
     },
-    alignItemsAndJustifyContent: {
-      width: 500,
-      height: 80,
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: 'pink',
+
+    buttonContainer: {
+        width: '100%'
     },
-  }));
+
+    SuperCard: {
+      padding: '0px 0px 0px 0px',   
+      textAlign: 'center',
+      
+    },
+
+    CardBackground: {
+      backgroundColor: '#222629',
+      maxHeight: '100%',
+      maxWidth: '100%',
+      margin: '25px',
+    },
+
+    CardGreenBackground1: {
+      maxWidth: ' 100%',
+      maxHeight: '100%',
+      backgroundColor: '#1b4441c2',
+      alignItems: 'center'
+    },
+
+      
+
+    Inner: {
+      padding: '0px 0px 0px 0px', 
+      maxHeight: '100%',
+      maxWidth: '100%',
+    },
+
+    LeaderName: {
+      textAlign: 'center',
+      maxHeight: '100%',
+    },
+
+    Text: {
+      textAlign: 'center',
+    },
+
+    header: {
+      paddingTop: '30px',
+        textAlign: 'center',
+    },
+
+    h2:{
+      fontSize: '18px',
+      marginTop: '1rem',
+      marginBottom: '2rem',
+    },
 
 
+
+};
+
+
+
+class Team extends Component {
+
+  //error below with the classes
+  const {classes} = this.props;
 
   return(
 
-    <div className = 'CardBackground'>
+    <div className = {classes.CardGreenBackground}>
 
-      <div className="MainHeader">
+      <div className={classes.MainHeader}>
         <h2 className="heading">Meet The Team</h2>
       </div>        
 
-      <div className = 'CardGreenBackground1'>
+      <div className = {classes.CardGreenBackground1}>
         <h3 align="left">Research Supervisor</h3>
         <SupGridList>
         </SupGridList>
@@ -73,7 +134,7 @@ function Team(props){
 
       
 
-      <div className="about-section">
+      <div className={classes.about-section}>
       
                    <Grid container spacing={0}>
                        <Grid item xs={13}>
@@ -83,7 +144,7 @@ function Team(props){
                            <p>
                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In arcu ligula, auctor ut dictum ac, malesuada et arcu. Vestibulum ut commodo enim, in pulvinar magna. Mauris est enim, pretium id porta ut, maximus at felis. Donec aliquam, velit a tempus accumsan, lorem metus viverra augue, ac convallis quam enim quis lacus. Aliquam ipsum orci, ullamcorper vel erat in, semper posuere tortor. Vestibulum consequat ante nec mauris iaculis ultrices. Vivamus non sagittis sem. Duis a laoreet ante, in facilisis nisl. Quisque tempor non orci id accumsan. Ut nulla augue, ultricies vel odio sed, porta finibus massa. Nunc auctor ante sit amet mi fermentum accumsan. Phasellus fermentum sed lacus id ornare. Curabitur congue, neque sed porta faucibus, risus orci aliquet ex, id fermentum nisl sapien vel sem. Nunc sodales, elit et hendrerit consectetur, sem mauris tempus ligula, sed faucibus quam libero a nibh. Sed orci ex, imperdiet dignissim urna ac, egestas bibendum tortor.
                        </p>
-                           <div className='button-container'>
+                           <div className={classes.button-container}>
  
                                <Button className="Button" variant="contained" color="inherit" href="#top">
                                    Learn More
@@ -97,12 +158,12 @@ function Team(props){
 
 
 
-      <div className = 'CardGreenBackground1'>
+      <div className = {classes.CardGreenBackground1}>
         <h3 align="left">Team Leaders</h3>
         <LeadGridList></LeadGridList>
       </div>
 
-      <div className = 'CardGreenBackground1' >
+      <div className = {classes.CardGreenBackground1} >
         <h3 align="left">Team Members</h3>
         <TeamGridList></TeamGridList>
       </div>
@@ -113,72 +174,7 @@ function Team(props){
  );
 }
 
-
-// function LeaderList(props){
-
-//   const leaderCards = props.list.map(leader => {
-//     return(
-//       <TeamLeaderCardLeft key={leader.name} name={leader.name} description = {leader.major} />
-//     );
-//     }
-//   );
-//   return(<div>{leaderCards}</div>);
-// }
-
-// function MemberList(props){
-
-//   const memberCards = props.list.map(member => {
-//     return(
-//       <MemberCardLeft key={member.name} name={member.name} description = {member.major} />
-//     );
-//     }
-//   );
-//   return(<div>{memberCards}</div>);
-// }
-
-// function SupervisorList(props) {
-//   const supervisorCards = props.list.map(supervisor =>
-//     <SupervisorCard key={supervisor.name} name={supervisor.name} description={supervisor.profession} image={supervisor.image}/>
-//   );
-//   return <div>{supervisorCards}</div>;
-// }
-
-// function TeamLeaderCardLeft(props){
-//   return(
-//     <div align= "left" className="LeaderCard">
-//         <div className="Inner">
-//           <h4 className="LeaderName">{props.name}</h4>
-//           <h5 className="ProfessionText"> {props.description} </h5>
-//         </div>
-//     </div>
-
-//   );
-
-// }
-
-// function MemberCardLeft(props){
-//   return(
-//     <div align= "left" className="LeaderCard">
-//         <div className="Inner">
-//           <h4 className="LeaderName">{props.name}</h4>
-//           <h5 className="ProfessionText"> {props.description} </h5>
-//         </div>
-//     </div>
-
-//   );
-
-// }
-
-// function SupervisorCard(props){
-//   return(
-//     <div align= "left" className="SuperCard">
-//         <div className="Inner">
-//           <h4 className="LeaderName">{props.name}</h4>
-//           <h5 className="ProfessionText">{props.description}</h5>
-//         </div>
-//     </div>
-//   );
-// }
+}
 
 
 
