@@ -116,7 +116,7 @@ function Team(props){
 class Team extends Component {
 
   //error below with the classes
-  const {classes} = this.props;
+  const classes = this.props;
 
   return(
 
