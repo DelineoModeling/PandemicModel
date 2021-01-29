@@ -20,7 +20,6 @@ class OptionMenu extends Component {
 
     handleAdd = () => {
         this.setState({ hidden: !this.state.hidden })
-        //console.log("Add Was clicked:"+ this.state.hidden)
     }
 
     toggle = () => this.setState({ dropdownOpen: !this.state.dropdownOpen });

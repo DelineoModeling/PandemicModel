@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import theme from './const/theme';
-// routers
+
 import {
     BrowserRouter as Router,
     Switch,

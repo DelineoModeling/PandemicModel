@@ -1,9 +1,3 @@
-/* Use these sites to get icons and place types
-icons 				https://sites.google.com/site/gmapsdevelopment/
-google maps 		https://developers.google.com/places/web-service/supported_types
-osm overpass		https://wiki.openstreetmap.org/wiki/Key:amenity
-*/
-
 export const options = ['food', 'transportation'];
 
 export const markerIcons = {};

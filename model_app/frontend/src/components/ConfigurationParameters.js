@@ -2,29 +2,24 @@ import React from 'react';
 import '../containers/Simulator.css'
 import Slider from '@material-ui/core/Slider'
 import {withStyles, makeStyles} from '@material-ui/core/styles';
-//import Select from "react-dropdown-select";
 
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Dropdown } from 'reactstrap';
-//import {MuiPickersUtilsProvider, KeyboardDatePicker} from '@material-ui/core/pickers';
 
 
 
-//used to change various styles of the slider
 const DaySlider = withStyles({
     root: {
         color: '#ffbb00',
     },
 })(Slider);
 
-//just a place holder for now for returning the values
-
 
 function Parameters(){
-    
+
     return(
 
     <div>
@@ -173,7 +168,7 @@ function Parameters(){
                                     <option value="Close">Close Proximity</option>
                                     </select>
                                 </Dropdown>
-                                
+
                             </td>
                         </tr>
 

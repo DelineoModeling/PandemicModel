@@ -1,4 +1,3 @@
-// check action and dispatch to reducer
 import { GET_TIMESERIES } from "../actions/types";
 
 export default function (state=[], action) {

@@ -1,4 +1,3 @@
-// check action and dispatch to reducer
 import { ADD_POLYGON, DELETE_POLYGON, RESET_POLYGON } from "../actions/types";
 
 export default function (state=[], action) {

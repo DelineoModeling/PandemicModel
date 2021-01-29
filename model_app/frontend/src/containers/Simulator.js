@@ -46,8 +46,6 @@ const useStyles = makeStyles((theme) => ({
   }));
 
 class Simulator extends Component {
-    // classes = useStyles();
-
     constructor() {
         super();
         this.state = {
@@ -99,7 +97,6 @@ class Simulator extends Component {
                         });
 
                     // should probably save data to redux store
-                    // maybe also save jobId? idk yet
                 }
             })
             .catch(err => {
@@ -119,7 +116,6 @@ class Simulator extends Component {
                 .catch(err => console.log(err));
         }
     }
-    //<p style={{ textAlign: 'left', fontSize: '20px', color: '#66FCF1' }}>Model Parameters</p>
 
     render() {
         const { data, jobId, loading } = this.state;
@@ -178,13 +174,13 @@ class Simulator extends Component {
                         <GoogleMap />
                     </div>
 
-                    
+
                 </Grid>
                 </Grid>
 
 <div className='fab'>
           <Fab variant="extended"  style={{'bottom': '40px'}} onClick={this.handleOnClick}>
-            <PlayArrowIcon  /> Run Simulation 
+            <PlayArrowIcon  /> Run Simulation
           </Fab>
             </div>
             </div>

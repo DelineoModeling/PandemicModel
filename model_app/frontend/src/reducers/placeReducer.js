@@ -1,4 +1,3 @@
-// check action and dispatch to reducer
 import { GET_PLACE } from "../actions/types";
 
 export default function (state={}, action) {

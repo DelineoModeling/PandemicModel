@@ -5,14 +5,12 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import { Link } from 'react-router-dom';
 import './BlogPost.css'
- 
+
 function BlogPost (props) {
    return (
 
     <div>
-        {/* Hello world */}
-       
-        
+
         <title>Built with MongoDB: Interseller | MongoDB Blog</title>
         <meta name="description" content="Interseller is a recruiting tech startup that uses MongoDB to help 4,000 recruiters quickly hire the right candidates. " />
         <meta property="og:site_name" content="MongoDB" />
@@ -27,7 +25,7 @@ function BlogPost (props) {
         <meta name="twitter:description" content="Interseller is a recruiting tech startup that uses MongoDB to help 4,000 recruiters quickly hire the right candidates. " />
         <meta name="twitter:image" content="https://webassets.mongodb.com/_com_assets/cms/0 (2)-19amvr4s7p.jpeg" />
 
-        
+
         <link rel="stylesheet" type="text/css" href="https://static.mongodb.com/blog/index.7065fd35cc8803bd38d6ae9ddeb9748e.css" />
         <noscript>
           &lt;style&gt;
@@ -43,7 +41,7 @@ function BlogPost (props) {
         </noscript>
         <div id="mongo-app">
           <main className="app">
-            
+
             <div className="relative w-full overflow-hidden fl fl-center-x fl-wrap">
               <header className="header relative fl fl-center fl-column w-full z-index-10 m-t-70 m-b-10 p-20 h-360">
                 <div className="absolute top left w-full h-full" style={{backgroundImage: 'url("https://webassets.mongodb.com/_com_assets/cms/Screen Shot 2020-12-02 at 4.26.35 PM-tfox8tnrhh.png")', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}} />
@@ -67,7 +65,7 @@ function BlogPost (props) {
                     <br />
                     <small className="post-date">Date of Blog</small>
                     <br />
-                    
+
                   </div>
                 </div>
                 <div className="cms-content h2-30">
@@ -121,22 +119,22 @@ function BlogPost (props) {
                 <div className="w-full fl fl-center m-v-20">
                   <div className="w-full w-max-300" style={{height: '1px', background: '#C9E0E0'}} />
                   <div className="fl fl-center p-20">
-                    
+
                   </div>
                   <div className="w-full w-max-300" style={{height: '1px', background: '#D9E0E0'}} />
                 </div>
-                
-                
+
+
               </div>
             </div>
-           
+
           </main>
-         
+
         </div>
         <p />
       </div>
 
-       
+
    );
 }
 
@@ -150,5 +148,5 @@ class BackButton {
     }
 }
 
- 
+
 export default BlogPost;
