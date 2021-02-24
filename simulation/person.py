@@ -9,7 +9,7 @@ class Person:
                               demographicInfo, severityRisk, currentLocation, infectionState, incubation, infectionTimer, peakStateDays, maximumInfectionState, recoveryDays)
 
     # Sets all parameters.
-    def setAllParameters(self, ID, age=0, sex=0, householdLocation=0, householdMembers=[], comorbidities=0, demographicInfo=0, severityRisk=0, currentLocation=0, infectionState=False, incubation=0):
+    def setAllParameters(self, ID, age=0, sex=0, householdLocation=0, householdMembers=[], comorbidities=0, demographicInfo=0, severityRisk=0, currentLocation=0, infectionState=False, incubation=0, infectionTimer=0, peakStateDays=4, maximumInfectionState=-1, recoveryDays = [0, 0, 0, 0]):
         self.ID = ID
         self.age = age
         self.sex = sex
@@ -23,6 +23,10 @@ class Person:
         self.infectionState = infectionState
         self.incubation = incubation
         self.disease = []
+        self.infectionTimer = infectionTimer
+        self.peakStateDays = peakStateDays
+        self.maximumInfectionState = maximumInfectionState
+        self.recoveryDays = recoveryDays
 
     def getID(self):
         return self.ID
@@ -55,6 +59,9 @@ class Person:
 
     def setIncubation(self, incubation):
         self.incubation = incubation
+
+    def setPeakStateDays(self, peakStateDays):
+        self.peakStateDays = peakStateDays
 
     # calculate severity risk based on demographic factors, as of now calculation is undefined.
     def calcSeverityRisk(self, age, sex, comorbidities):
