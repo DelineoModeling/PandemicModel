@@ -214,11 +214,8 @@ function DevelopmentBlog(props) {
 
   return (
     <div className="App">
-      <AppBar className={classes.appBar} position="static">
+      <AppBar className={classes.appBar} style={{background: "white", boxShadow: "none"}} position="static">
         <Toolbar>
-          <Typography variant="h6" color="primary" >
-
-          </Typography>
         </Toolbar>
       </AppBar>
       <Grid container spacing={3}>
