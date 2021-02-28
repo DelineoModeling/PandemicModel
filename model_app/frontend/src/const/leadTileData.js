@@ -1,23 +1,39 @@
 import image from '../images/person-icon.png';
+import mathias_headshot from '../images/mathias_insley.png'
+import simone_headshot from '../images/simone_bliss.png'
+import stephen_headshot from '../images/stephen_li.png'
+import image_simone from '../images/image.png'
+import image_zoe from '../images/zoe_kim.png'
 
 const tileData = [
   {
-    img: image,
-    name: 'Team Leader 1',
-    role: 'Leader',
-    description: 'Major',
+    img: mathias_headshot,
+    name: 'Mathias Insley',
+    role: 'Software Development Manager',
+    description: '',
+    team: '',
   },
   {
-    img: image,
-    name: 'Team Leader 2',
-    role: 'Leader',
+    img: image_simone,
+    name: 'Simone Bliss',
+    role: 'Fullstack Lead',
     description: 'Major',
+    team: 'FS'
   },
   {
-    img: image,
-    name: 'Team Leader 3',
-    role: 'Leader',
+    img: stephen_headshot,
+    name: 'Stephen Li',
+    role: 'Machine Learning Technical Lead',
     description: 'Major',
+    team: 'ML'
+  },
+
+  {
+    img: image_zoe,
+    name: 'Zoe Kim',
+    role: 'Information Support Lead',
+    description: 'Major',
+    team: 'IS'
   },
 ];
 
