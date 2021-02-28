@@ -21,7 +21,7 @@ class TeamFilter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      all: false,
+      all: true,
       fs: false,
       sim: false,
       ml: false,
@@ -51,45 +51,73 @@ class TeamFilter extends Component {
     const { showing} = this.state
     return (
       <div>
-          <button onClick={() => this.setState({ all: !all, fs: false, sim: false, ml: false, info: false })}>all</button>
+          <Button mt={2} variant="contained" color="primary" onClick={() => this.setState({ all: !all, fs: false, sim: false, ml: false, info: false })}>all</Button>
+
+          <Button mt={2} variant="contained" color="primary"  onClick={() => this.setState({ all: false, fs: !fs, sim: false, ml: false, info: false})}>full stack</Button>
+
+          <Button mt={2} variant="contained" color="primary"  onClick={() => this.setState({ all: false, fs: false, sim: !sim, ml: false, info: false })}>simulation</Button>
+
+          <Button mt={2} variant="contained" color="primary"  onClick={() => this.setState({ all: false, fs: false, sim: false, ml: !ml, info: false })}>machine learning</Button>
+
+          <Button mt={2} variant="contained" color="primary"  onClick={() => this.setState({ all: false, fs: false, sim: false, ml: false, info: !info })}>infop</Button>
+
           { all
-              ?            <div className = 'CardGreenBackground1' >
+              ?  <div>
+                    <br></br>
+                    <div className = 'CardGreenBackground1' >
                       <h3 align="left">Team Members</h3>
                       <TeamGridList></TeamGridList>
                     </div>
+                </div>
 
               : null
           }
-          <button onClick={() => this.setState({ all: false, fs: !fs, sim: false, ml: false, info: false})}>full stack</button>
           { fs
-              ? <div className = 'CardGreenBackground1'>
-                      <h3 align="left">Team Leaders</h3>
-                      <LeadGridList></LeadGridList>
-                    </div>
+            ?  <div>
+                  <div className = 'TeamAbout'>
+                    <h3> Full Stack Team Description </h3>
+                  </div>
+                  <div className = 'CardGreenBackground1' >
+                    <h3 align="left">Team Members</h3>
+                    <TeamGridList></TeamGridList>
+                  </div>
+              </div>
               : null
           }
-          <button onClick={() => this.setState({ all: false, fs: false, sim: !sim, ml: false, info: false })}>simulation</button>
           { sim
-              ? <div className = 'CardGreenBackground1'>
-                      <h3 align="left">Team Leaders</h3>
-                      <LeadGridList></LeadGridList>
-                    </div>
+            ?  <div>
+                  <div className = 'TeamAbout'>
+                    <h3> Simulation Team Description </h3>
+                  </div>
+                  <div className = 'CardGreenBackground1' >
+                    <h3 align="left">Team Members</h3>
+                    <TeamGridList></TeamGridList>
+                  </div>
+              </div>
               : null
           }
-          <button onClick={() => this.setState({ all: false, fs: false, sim: false, ml: !ml, info: false })}>machine learning</button>
           { ml
-              ? <div className = 'CardGreenBackground1'>
-                      <h3 align="left">Team Leaders</h3>
-                      <LeadGridList></LeadGridList>
-                    </div>
+            ?  <div>
+                  <div className = 'TeamAbout'>
+                    <h3> Machine Learning Team Description </h3>
+                  </div>
+                  <div className = 'CardGreenBackground1' >
+                    <h3 align="left">Team Members</h3>
+                    <TeamGridList></TeamGridList>
+                  </div>
+              </div>
               : null
           }
-          <button onClick={() => this.setState({ all: false, fs: false, sim: false, ml: false, info: !info })}>infop</button>
           { info
-              ? <div className = 'CardGreenBackground1'>
-                      <h3 align="left">Team Leaders</h3>
-                      <LeadGridList></LeadGridList>
-                    </div>
+            ?  <div>
+                  <div className = 'TeamAbout'>
+                    <h3> Information Team Descripiton </h3>
+                  </div>
+                  <div className = 'CardGreenBackground1' >
+                    <h3 align="left">Team Members</h3>
+                    <TeamGridList></TeamGridList>
+                  </div>
+              </div>
               : null
           }
 

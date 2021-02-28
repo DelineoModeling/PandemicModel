@@ -84,41 +84,16 @@ function Team(props){
 
 
       </div>
-      <TeamFilter></TeamFilter>
-
-      <div className = 'TeamFilter'>
-
-
-      <Button mt={2} variant="contained" color="primary" className='TeamFilter' onClick={() => { console.log('onClick'); }} >All
-        </Button>
-        <Button mt={2}  variant="contained" color="primary" className='TeamFilter' onClick={() => { console.log('onClick'); }} >Full Stack
-        </Button>
-        <Button mt={2} variant="contained" color="primary" className='TeamFilter' >Simulation
-        </Button>
-        <Button mt={2} variant="contained" color="primary" className='TeamFilter' >Machine Learning
-        </Button>
-
-        <Button mt={2} variant="contained" color="primary" className='TeamFilter' >Information Support
-        </Button>
-
-      </div>
-
-      <div className = 'TeamAbout'>
-        <h3> Team Responsibility Descriptions... </h3>
-      </div>
-
-
-
-
-      <div className = 'CardGreenBackground1'>
-        <h3 align="left">Team Leaders</h3>
-        <LeadGridList></LeadGridList>
-      </div>
+      <br></br>
 
       <div className = 'CardGreenBackground1' >
-        <h3 align="left">Team Members</h3>
-        <TeamGridList></TeamGridList>
+        <h3 align="left">Leaders</h3>
+        <LeadGridList></LeadGridList>
       </div>
+      <br></br>
+      <TeamFilter></TeamFilter>
+
+
 
    </div>
 
