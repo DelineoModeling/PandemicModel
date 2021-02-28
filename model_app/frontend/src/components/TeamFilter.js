@@ -2,25 +2,99 @@ import React, { Component }  from 'react';
 
 
 import { Button } from 'reactstrap';
+import leaders from '../const/leader.js';
+import members from '../const/member.js';
+import TeamGridList from '../components/TeamGridList.js'
+import SupGridList from '../components/SupGridList.js'
+import LeadGridList from '../components/LeaderGridList.js'
+import { makeStyles } from '@material-ui/core/styles';
+import FunctionClick from '../components/FunctionClick'
+import Grid from '@material-ui/core/Grid';
+import { styled } from "@material-ui/core/styles";
+import { spacing } from "@material-ui/system";
+import MuiButton from "@material-ui/core/Button";
 
-class TeamFilter extends React.Component {
+class TeamFilter extends Component {
   // This syntax ensures `this` is bound within handleClick.
   // Warning: this is *experimental* syntax.
-  handleClick = () => {
-    console.log('this is:', this);
 
-    if (this.button == "All") {
-      
+  constructor(props) {
+    super(props);
+    this.state = {
+      all: false,
+      fs: false,
+      sim: false,
+      ml: false,
+      info: false
     }
+  this.changeDiv= this.changeDiv.bind(this);
+}
+  changeDiv() {
+    this.setState({
+      all: false,
+      fs: false,
+      sim: false,
+      ml: false,
+      info: false
+  })
+}
 
-  }
+
 
   render() {
-    return (
-      <button onClick={this.handleClick}>
-        Click me
-      </button>
+    const { all } = this.state
+    const { fs } = this.state
+    const { sim } = this.state
+    const { ml } = this.state
+    const { info } = this.state
 
+    const { showing} = this.state
+    return (
+      <div>
+          <button onClick={() => this.setState({ all: !all, fs: false, sim: false, ml: false, info: false })}>all</button>
+          { all
+              ?            <div className = 'CardGreenBackground1' >
+                      <h3 align="left">Team Members</h3>
+                      <TeamGridList></TeamGridList>
+                    </div>
+
+              : null
+          }
+          <button onClick={() => this.setState({ all: false, fs: !fs, sim: false, ml: false, info: false})}>full stack</button>
+          { fs
+              ? <div className = 'CardGreenBackground1'>
+                      <h3 align="left">Team Leaders</h3>
+                      <LeadGridList></LeadGridList>
+                    </div>
+              : null
+          }
+          <button onClick={() => this.setState({ all: false, fs: false, sim: !sim, ml: false, info: false })}>simulation</button>
+          { sim
+              ? <div className = 'CardGreenBackground1'>
+                      <h3 align="left">Team Leaders</h3>
+                      <LeadGridList></LeadGridList>
+                    </div>
+              : null
+          }
+          <button onClick={() => this.setState({ all: false, fs: false, sim: false, ml: !ml, info: false })}>machine learning</button>
+          { ml
+              ? <div className = 'CardGreenBackground1'>
+                      <h3 align="left">Team Leaders</h3>
+                      <LeadGridList></LeadGridList>
+                    </div>
+              : null
+          }
+          <button onClick={() => this.setState({ all: false, fs: false, sim: false, ml: false, info: !info })}>infop</button>
+          { info
+              ? <div className = 'CardGreenBackground1'>
+                      <h3 align="left">Team Leaders</h3>
+                      <LeadGridList></LeadGridList>
+                    </div>
+              : null
+          }
+
+      </div>
     );
   }
 }
+export default TeamFilter

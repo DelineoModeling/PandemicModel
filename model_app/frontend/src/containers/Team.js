@@ -63,14 +63,14 @@ function Team(props){
         <h2>Meet The Team</h2>
       </div>
 
-      
-    
-  
+
+
+
 
       <div className = "Supervisor" align="center" >
         <h3 align="center">Research Supervisor</h3>
 
-       
+
 
         <SupGridList   container
   spacing={0}
@@ -81,13 +81,14 @@ function Team(props){
 
 
 
-     
+
 
       </div>
+      <TeamFilter></TeamFilter>
 
       <div className = 'TeamFilter'>
 
-      
+
       <Button mt={2} variant="contained" color="primary" className='TeamFilter' onClick={() => { console.log('onClick'); }} >All
         </Button>
         <Button mt={2}  variant="contained" color="primary" className='TeamFilter' onClick={() => { console.log('onClick'); }} >Full Stack
@@ -99,7 +100,7 @@ function Team(props){
 
         <Button mt={2} variant="contained" color="primary" className='TeamFilter' >Information Support
         </Button>
-       
+
       </div>
 
       <div className = 'TeamAbout'>
